@@ -44,14 +44,13 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
     desc.add_options()
         ("help", "help message")
         ("args", po::value<std::string>(&args)->default_value(""), "single uhd device address args")
-        ("wire", po::value<std::string>(&wire)->default_value(""), "the over the wire type, sc16, sc8, etc")
-        ("secs", po::value<double>(&seconds_in_future)->default_value(1.5), "number of seconds in the future to transmit")
-        ("nsamps", po::value<size_t>(&total_num_samps)->default_value(10000), "total number of samples to transmit")
+        // ("wire", po::value<std::string>(&wire)->default_value(""), "the over the wire type, sc16, sc8, etc")
+        // ("secs", po::value<double>(&seconds_in_future)->default_value(1.5), "number of seconds in the future to transmit")
         ("rate", po::value<double>(&rate)->default_value(100e3), "rate of outgoing samples")
         ("freq", po::value<double>(&freq)->default_value(250.0e6), "center frequency Hz")
         ("gain", po::value<double>(&gain)->default_value(30), "gain dB")
-        ("ampl", po::value<float>(&ampl)->default_value(float(0.3)), "amplitude of each sample")
-        ("dilv", "specify to disable inner-loop verbose")
+        // ("ampl", po::value<float>(&ampl)->default_value(float(0.3)), "amplitude of each sample")
+        // ("dilv", "specify to disable inner-loop verbose")
     ;
     // clang-format on
     po::variables_map vm;
